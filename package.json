@@ -1,0 +1,26 @@
+{
+  "name": "hockey-rater",
+  "version": "1.0.0",
+  "description": "Compares NHL Players",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Tests Complete!\"",
+    "start": "node ./src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColinFriday/hockey-rater.git"
+  },
+  "keywords": [
+    "NHL"
+  ],
+  "author": "Colin Friday",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColinFriday/hockey-rater/issues"
+  },
+  "homepage": "https://github.com/ColinFriday/hockey-rater#readme",
+  "dependencies": {
+    "mysportsfeeds-node": "^0.2.2"
+  }
+}
