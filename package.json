@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Tests Complete!\"",
-    "start": "node ./src/main.js"
+    "start": "node ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/ColinFriday/hockey-rater#readme",
   "dependencies": {
+    "jQuery": "^1.7.4",
+    "jquery": "^3.2.1",
     "mysportsfeeds-node": "^0.2.2"
   }
 }
