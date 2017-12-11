@@ -12,7 +12,7 @@ var fs = require('fs');
 var msf = new mySportsFeeds("1.0", true);
 
 var playerArray;
-var exportObject = {};
+var object = {'players' : null};
 var exportPlayers = [];
 
 var retrievePlayers = function(username, password) {
@@ -31,11 +31,11 @@ var readPlayers = function(){
     //console.dir(playerArray);
 };
 
-var exportPlayers = function(){
+var exportObject = function(){
+  
+    object.players = exportPlayers;
     
-    exportObject.players = exportPlayers;
-    
-    return exportObject;
+    return object;
 };
 
 var preparePlayers = function(){  
@@ -93,10 +93,10 @@ var preparePlayers = function(){
         
     }
     
-    console.dir(exportPlayers);
+    //console.dir(exportPlayers);
 }
 
 module.exports.retrievePlayers = retrievePlayers;
 module.exports.readPlayers = readPlayers;
 module.exports.preparePlayers = preparePlayers;
-module.exports.exportPlayers = exportPlayers;
+module.exports.exportObject = exportObject;
