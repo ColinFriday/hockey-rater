@@ -21,6 +21,8 @@ function onRequest(request, response) {
 http.createServer(onRequest).listen(port);
 
 playerManager.retrievePlayers(username,password);
+
+playerManager.readPlayers();
     
 playerManager.preparePlayers();
 
