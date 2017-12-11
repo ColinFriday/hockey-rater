@@ -15,16 +15,22 @@ var password = "CodyIsCool";
 var port = process.env.PORT || process.env.NODE_PORT || 3005;
 
 function onRequest(request, response) {
+    playerManager.retrievePlayers(username,password);
+
+    playerManager.readPlayers();
     
+    playerManager.preparePlayers();
+    
+    response.writeHead(200, { "Content-Type" : "application/json"});
+
+    response.write(JSON.stringify(playerManager.exportPlayers()));
+    
+    response.end();
 }
 
 http.createServer(onRequest).listen(port);
 
 playerManager.retrievePlayers(username,password);
-
-playerManager.readPlayers();
-    
-playerManager.preparePlayers();
 
     
 

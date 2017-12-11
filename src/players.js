@@ -33,6 +33,9 @@ var readPlayers = function(){
 
 var exportPlayers = function(){
     
+    exportObject.players = exportPlayers;
+    
+    return exportObject;
 };
 
 var preparePlayers = function(){  
